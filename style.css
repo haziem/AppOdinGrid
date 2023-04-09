@@ -1,0 +1,337 @@
+@font-face {
+	src: url('fonts/Norse-Bold.otf') format('opentype');
+	font-family: 'Norse';
+}
+/* RESET START */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	text-rendering: optimizeSpeed;
+	min-height: 100vh;
+	line-height: 1.5;
+	color: #2f2f2f;
+}
+
+h1,
+h2,
+h3 {
+	color: black;
+	font-weight: 800;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	display: block;
+	max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+:root {
+	font-size: 62.5%;
+}
+
+html {
+	font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* RESET END */
+
+body {
+	background-color: #fafafa;
+	font-size: 1.5rem;
+}
+.main-container {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr 3fr 1fr;
+	font-size: 1.5rem;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.logo img {
+	width: 5rem;
+	height: auto;
+	margin-right: 2rem;
+}
+
+.main-nav {
+	grid-row: 1/3;
+	grid-column: 1/2;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 3;
+	grid-row: 1/2;
+	grid-column: 2/4;
+}
+.header img {
+	/* border: 3px solid pink; */
+	border-radius: 50%;
+	box-shadow: 0 0 5px black;
+}
+.header-up,
+.header-bottom,
+.avatar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-up img {
+	width: 6rem;
+}
+.header-bottom img {
+	width: 8rem;
+}
+
+.main-area-left {
+	grid-row: 2/3;
+	grid-column: 2/3;
+}
+
+.main-area-right {
+	grid-row: 2/3;
+	grid-column: 3/4;
+	margin-right: 3rem;
+}
+.avatar-img-small {
+	border-radius: 50%;
+	width: 5rem;
+	float: left;
+	margin-right: 1rem;
+	/* padding-right: 1rem; */
+}
+
+li {
+	list-style-type: none;
+	border-bottom: solid 1px #d2d2d2;
+	font-size: 1.5rem;
+	padding: 1rem 0;
+	transition: transform 0.2s;
+}
+.projects {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 200px;
+	font-size: 1.25rem;
+	border: solid 1px #d2d2d2;
+	transition: transform 0.2s;
+}
+
+.project-icons {
+	font-size: 2rem;
+	text-align: right;
+}
+.project-icons i {
+	padding-left: 1rem;
+	cursor: pointer;
+}
+
+.project:hover {
+	transform: scale(1.1);
+	background-color: #fff;
+}
+.announcement,
+.trending {
+	cursor: pointer;
+	margin-top: 0.5rem;
+	position: relative;
+}
+
+.announcement::before,
+.trending::before {
+	content: '';
+	position: absolute;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 0;
+	border: solid 1px #d8d8d8;
+	height: 5rem;
+}
+
+.announcement:hover::before,
+.trending:hover::before {
+	border: solid 1px #fafafa;
+	transition: border 0.2s;
+}
+
+.announcement:hover,
+.trending:hover {
+	box-shadow: 0px 0px 5px lightgrey;
+	transition: box-shadow 0.2s;
+}
+
+li:hover {
+	border-bottom: solid 2px #d2d2d2;
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+.search,
+.person-data {
+	display: flex;
+	align-items: center;
+}
+
+.search {
+	justify-content: start;
+}
+
+.person-data {
+	justify-content: center;
+}
+.person-data *:hover {
+	cursor: pointer;
+}
+
+.main-container,
+.main-area-left,
+.search,
+.avatar,
+.person-greeting,
+.buttons,
+.person-data,
+.person-data i,
+.person-data h3,
+.logo,
+.project,
+.trending,
+.announcement,
+.announcements,
+.trendings {
+	padding: 1rem;
+}
+.search i {
+	padding-right: 2rem;
+	cursor: pointer;
+}
+
+input {
+	background-color: #e2e2e2;
+	border: none;
+	width: 30vw;
+	transition: background-color 0.2s;
+}
+
+.person-data i {
+	font-size: 2rem;
+}
+
+.person-data img {
+	margin: 0 2rem;
+}
+.buttons {
+	width: 25vw;
+	display: flex;
+	justify-content: space-around;
+}
+.buttons button {
+	padding: 1rem;
+	border-radius: 0;
+	border: solid 2px lightgray;
+	background-color: transparent;
+	cursor: pointer;
+	transition: border 0.2s;
+}
+.buttons button:hover {
+	border: solid 2px darkgray;
+}
+input:hover {
+	background-color: #cecece;
+}
+
+.nav2 {
+	margin-top: 5rem;
+}
+
+.trending .name {
+	font-weight: 600;
+}
+
+.announcements h3,
+.trendings h3 {
+	text-decoration: none;
+}
+
+input:focus,
+button:focus {
+	outline: solid 1px rgb(96, 96, 96);
+}
+
+.fa-bell {
+	animation: ring;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	position: relative;
+	opacity: 1;
+}
+
+@keyframes ring {
+	from {
+		transform: rotate(-30deg);
+	}
+	50% {
+		transform: rotate(30deg);
+	}
+	to {
+		transform: rotate(-30deg);
+	}
+}
